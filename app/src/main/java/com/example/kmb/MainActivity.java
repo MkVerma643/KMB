@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         mywebview = (WebView)findViewById(R.id.webView);
         WebSettings webSettings = mywebview.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        mywebview.loadUrl("https://careerhigh.in");
+        mywebview.loadUrl("http://kalyanmainbazar.com/");
         mywebview.setWebViewClient(new WebViewClient());
     }
 
