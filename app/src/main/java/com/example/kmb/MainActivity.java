@@ -16,11 +16,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         mywebview = (WebView)findViewById(R.id.webView);
         WebSettings webSettings = mywebview.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+
         mywebview.loadUrl("http://kalyanmainbazar.com/");
         mywebview.setWebViewClient(new WebViewClient());
+        mywebview.setInitialScale(40);
+
     }
 
     @Override
@@ -39,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-        if(id == R.id.action_settings){
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item){
+//        int id = item.getItemId();
+//        if(id == R.id.action_settings){
+//            return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }
